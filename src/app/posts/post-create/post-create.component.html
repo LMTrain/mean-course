@@ -1,6 +1,16 @@
 <h2>LM Systems LLC</h2>
-<textarea rows="6" [value]="newPost" #postInput></textarea>
-<textarea rows="6" [(ngModel)]="enteredValue"></textarea>
+<mat-card>
+  <mat-form-field>
+    <textarea matInput rows="6" [value]="newPost" #postInput></textarea>
+  </mat-form-field>
+</mat-card>
+
+<mat-card>
+  <mat-form-field>
+    <textarea rows="6" [(ngModel)]="enteredValue"></textarea>
+  </mat-form-field>
+</mat-card>
+
 <hr>
 <button (click)="onAddPost()">Save Post</button>
 <p>{{ newPost }}</p>
