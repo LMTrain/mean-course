@@ -1,27 +1,12 @@
-<h2>LM Systems LLC</h2>
 <mat-card>
   <mat-form-field>
-    <textarea matInput rows="6" [(ngModel)]="enteredValue"></textarea>
+    <input matInput type="text" [(ngModel)]="enteredTitle">
   </mat-form-field>
-  <button
-  mat-raised-button
-  color="warn"
-  (click)="onAddPost()">Save Post</button>
-</mat-card>
-<p>{{ newPost }}</p>
-
-
-<mat-card>
   <mat-form-field>
-    <textarea matInput rows="6" [value]=" " #postInput></textarea>
+    <textarea matInput rows="6" [(ngModel)]="enteredContent"></textarea>
   </mat-form-field>
   <button
-  mat-raised-button
-  color="primary"
-  (click)="onAddPost()">Save Post</button>
+    mat-raised-button
+    color="accent"
+    (click)="onAddPost()">Save Post</button>
 </mat-card>
-<p>{{ newPost }}</p>
-
-
-
-
