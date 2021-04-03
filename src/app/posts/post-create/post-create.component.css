@@ -6,3 +6,8 @@ textarea {
 mat-spinner {
   margin:auto;
 }
+
+/* HIDDING THE INTERFACE FOR UPLOADING IMAGE FILES */
+input[type='file'] {
+  visibility: hidden;
+}
