@@ -16,15 +16,15 @@ export class PostsService {
 
   getPosts() {
     this.http
-      .get<{message: string, posts: any }>(
-        'http://localhost:3000/api/posts'
-      )
-      .pipe(map((postData) => {
+      .get<{message: string, posts: any }>('http://localhost:3000/api/posts')
+      .pipe(
+        map((postData) => {
         return postData.posts.map(post => {
           return {
             title: post.title,
             content: post.content,
-            id: post._id
+            id: post._id,
+            imagePath: post.imagePath
           };
         });
       }))
