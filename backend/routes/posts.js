@@ -26,9 +26,12 @@ const storage = multer.diskStorage({
     cb(null, name + '-' + Date.now() + '.' + ext);
   }
 });
-router.post("", multer({storage: storage}).single("image"), (req, res, next) => {
-  const url = req.ptotocol + '://' + req.get("host");
-  const post = new Post({
+router.post(
+  "",
+  multer({storage: storage}).single("image"),
+  (req, res, next) => {
+    const url = req.ptotocol + '://' + req.get("host");
+    const post = new Post({
     title: req.body.title,
     content: req.body.content,
     imagePath: url + "/images/" + req.file.filename
