@@ -4,8 +4,9 @@
 }
 
 mat-spinner {
-  margin:auto;
+  margin: auto;
 }
+
 mat-paginator {
   margin-top: 1rem;
 }

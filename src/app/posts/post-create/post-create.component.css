@@ -4,11 +4,10 @@ textarea {
 }
 
 mat-spinner {
-  margin:auto;
+  margin: auto;
 }
 
-/* HIDDING THE INTERFACE FOR UPLOADING IMAGE FILES */
-input[type='file'] {
+input[type="file"] {
   visibility: hidden;
 }
 

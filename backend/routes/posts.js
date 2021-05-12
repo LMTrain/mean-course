@@ -59,7 +59,7 @@ router.put(
     let imagePath = req.body.imagePath;
     if (req.file) {
       const url = req.protocol + "://" + req.get("host");
-      imagePath = url + "/images/" + req.file.filename
+      imagePath = url + "/images/" + req.file.filename;
     }
     const post = new Post({
       _id: req.body.id,
@@ -75,10 +75,11 @@ router.put(
 );
 
 router.get("", (req, res, next) => {
-  const pageSize = +req.query.pageSize;
+  const pageSize = +req.query.pagesize;
   const currentPage = +req.query.page;
-  const postQuery = post.find();
-  if (pageSize && currentP) {
+  const postQuery = Post.find();
+  let fetchedPosts;
+  if (pageSize && currentPage) {
     postQuery.skip(pageSize * (currentPage - 1)).limit(pageSize);
   }
   postQuery
@@ -93,12 +94,6 @@ router.get("", (req, res, next) => {
         maxPosts: count
       });
     });
-  //Post.find().then(documents => {
-   // res.status(200).json({
-    //  message: "Posts fetched successfully!",
-    //  posts: documents
-   // });
-  //});
 });
 
 router.get("/:id", (req, res, next) => {
