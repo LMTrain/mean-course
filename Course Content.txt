@@ -1,0 +1,3 @@
+Section 8: Adding User Authentication
+	102 -- Implementing SPA Authentication
+		npm install --save jsonwebtoken

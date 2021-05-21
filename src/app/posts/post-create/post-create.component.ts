@@ -63,7 +63,6 @@ export class PostCreateComponent implements OnInit {
     });
   }
 
-
   onImagePicked(event: Event) {
     const file = (event.target as HTMLInputElement).files[0];
     this.form.patchValue({ image: file });
@@ -73,9 +72,6 @@ export class PostCreateComponent implements OnInit {
       this.imagePreview = reader.result as string;
     };
     reader.readAsDataURL(file);
-
-
-    
   }
 
   onSavePost() {
