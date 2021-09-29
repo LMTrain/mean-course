@@ -1,6 +1,6 @@
 {
   "env": {
-    "MONGO_ATLAS_PW": "layconsm",
+    "MONGO_ATLAS_PW": "C0deme-2019",
     "JWT_KEY": "secret_this_should_be_longer"
   }
 }
